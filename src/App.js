@@ -1,26 +1,103 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import wsj from './img/wsj.png';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import Home from "./components/Home/Home";
+import Articles from "./components/Articles";
+import ShowIndex from "./components/ShowIndex/ShowIndex";
+import Create from "./components/Create";
+import Edit from "./components/Edit/Edit";
+
+
+
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      articles: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('https://calm-reaches-73008.herokuapp.com/article')
+      .then(response => response.json())
+      .then(articles => {
+        console.log(articles)
+
+      })
+  }
+
+  render() {
+    // const Link = styled.a`
+    //   color: "#343434"
+    //   &:hover {
+    //     color: #2474C8;
+    //     cursor: pointer;
+    //   }
+    // `
+    // const flex = {
+    //   display: "flex"
+    // };
+    // const list1 = {
+    //   textDecoration: "none",
+    //   cursor: "pointer",
+    //   marginLeft: "230px"
+    // };
+    // const list = {
+    //   textDecoration: "none",
+    //   cursor: "pointer"
+    // };
+
+
+    return (
+      <div className="App">
+        <div class="nav">
+          <p>DJIA 26154.28 <span className="red">0.62%</span></p>
+          <p>Nasdaq 10632.58 <span className="green">0.46%</span></p>
+          <p>U.S.10Yr 1/32 Yield <span className="green">0.548%</span></p>
+          <p className="oil">Crude Oil 39.97 <span className="red">0%</span></p>
+          <p className="euro">Euro 1.1817 <span className="red">0.25%</span></p>
+        </div>
+        <div className="wsj-img"><img className="wsj" src={wsj}></img></div>
+        <Router>
+          <div>
+            <div className="">
+              <nav className="">
+                <div className="">
+                  <ul className="nav justify-content-center">
+                    <li className="nav-item">
+                      <Link className="nav-link active" to="/">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/article">Articles</Link>
+                    </li>
+                    {/* <li className="nav-item">
+                      <Link className="nav-link" to="/index/:id">Index</Link>
+                    </li> */}
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/create">Create</Link>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <Route path="/" exact component={Home} />
+            <Route path="/article" component={Articles} />
+            <Route path="/index/:id" component={ShowIndex} />
+            <Route path="/create" component={Create} />
+            <Route path="/update/:id" component={Edit} />
+            <Route path="/delete/:id" component={ShowIndex} />
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
