@@ -60,6 +60,8 @@ class Create extends Component {
             title: '',
             description: ''
         })
+
+        this.props.history.push('/article');
     }
 
 
