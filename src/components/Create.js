@@ -41,11 +41,6 @@ class Create extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        console.log("form submitted");
-        console.log(`author: ${this.state.author}`);
-        console.log(`title: ${this.state.title}`);
-        console.log(`description: ${this.state.description}`);
-
         const newArticle = {
             author: this.state.author,
             title: this.state.title,
