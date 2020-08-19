@@ -34,36 +34,17 @@ class App extends Component {
   }
 
   render() {
-    // const Link = styled.a`
-    //   color: "#343434"
-    //   &:hover {
-    //     color: #2474C8;
-    //     cursor: pointer;
-    //   }
-    // `
-    // const flex = {
-    //   display: "flex"
-    // };
-    // const list1 = {
-    //   textDecoration: "none",
-    //   cursor: "pointer",
-    //   marginLeft: "230px"
-    // };
-    // const list = {
-    //   textDecoration: "none",
-    //   cursor: "pointer"
-    // };
 
 
     return (
       <div className="App">
-        <div class="info">
+        {/* <div class="info">
           <p>DJIA 26154.28 <span className="red">0.62%</span></p>
           <p>Nasdaq 10632.58 <span className="green">0.46%</span></p>
           <p>U.S.10Yr 1/32 Yield <span className="green">0.548%</span></p>
           <p className="oil">Crude Oil 39.97 <span className="red">0%</span></p>
           <p className="euro">Euro 1.1817 <span className="red">0.25%</span></p>
-        </div>
+        </div> */}
         <div className="wsj-img"><img className="wsj" src={wsj}></img></div>
         <Router>
           <div>
@@ -75,9 +56,6 @@ class App extends Component {
                 <li className="nav-item">
                   <Link className="link" to="/article">Articles</Link>
                 </li>
-                {/* <li className="nav-item">
-                      <Link className="nav-link" to="/index/:id">Index</Link>
-                    </li> */}
                 <li className="nav-item">
                   <Link className="link" to="/create">Create</Link>
                 </li>
