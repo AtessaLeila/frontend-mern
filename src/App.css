@@ -1,4 +1,4 @@
-.nav {
+.info {
   background-color: black;
   color: white;
   /* margin-top: -20px; */
@@ -38,6 +38,7 @@ span.green:after {
   margin-right: auto;
   width: 50%;
   padding-top: 20px;
+  margin-bottom: 30px;
 }
 .article {
   column-count: 1;
@@ -45,11 +46,6 @@ span.green:after {
 
 .col {
   column-count: 2;
-}
-
-.navbar{
-  text-decoration: none;
-  
 }
 
 .flex{
@@ -61,22 +57,26 @@ span.green:after {
 ul {
   list-style: none;
   text-decoration: none;
+  color: #1C1C1C;
 }
 
 ul li{
   display: inline-block;
   float: none;
   margin-right: 30px;
+  
  
 }
 
-.list-item:hover{
+/* .list-item:hover{
   color:#008DFF;
+} */
+
+.link{
+  color: #1C1C1C;
+  margin-top: 50px;
 }
 
-.hr{
-  margin-top: -10px;
-}
 
 /* .ml-n1 {
   margin-left: -0.25rem !important;

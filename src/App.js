@@ -57,7 +57,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div class="nav">
+        <div class="info">
           <p>DJIA 26154.28 <span className="red">0.62%</span></p>
           <p>Nasdaq 10632.58 <span className="green">0.46%</span></p>
           <p>U.S.10Yr 1/32 Yield <span className="green">0.548%</span></p>
@@ -68,24 +68,21 @@ class App extends Component {
         <Router>
           <div>
             <div className="">
-              <nav className="">
-                <div className="">
-                  <ul className="nav justify-content-center">
-                    <li className="nav-item">
-                      <Link className="nav-link active" to="/">Home</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/article">Articles</Link>
-                    </li>
-                    {/* <li className="nav-item">
+              <ul className="nav justify-content-center">
+                <li className="nav-item">
+                  <Link className="link" to="/">Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="link" to="/article">Articles</Link>
+                </li>
+                {/* <li className="nav-item">
                       <Link className="nav-link" to="/index/:id">Index</Link>
                     </li> */}
-                    <li className="nav-item">
-                      <Link className="nav-link" to="/create">Create</Link>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+                <li className="nav-item">
+                  <Link className="link" to="/create">Create</Link>
+                </li>
+              </ul>
+              <hr></hr>
             </div>
             <Route path="/" exact component={Home} />
             <Route path="/article" component={Articles} />
