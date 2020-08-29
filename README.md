@@ -5,7 +5,7 @@ Built a front end to the Express CRUD API using React that interacts with and co
 
 ## Preview
 
-![](https://media.giphy.com/media/kyu5pGfHA2KYfj0lPk/giphy.gif)
+![]("../../img/app.png")
 
 
 ## Contact Me
