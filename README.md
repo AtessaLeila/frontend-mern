@@ -5,7 +5,7 @@ Built a front end to the Express CRUD API using React that interacts with and co
 
 ## Preview
 
-![]("../../img/app.png")
+https://atessaleila.github.io/frontend-mern/
 
 
 ## Contact Me
